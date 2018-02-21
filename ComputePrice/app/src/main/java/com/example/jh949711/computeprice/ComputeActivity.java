@@ -1,5 +1,6 @@
 package com.example.jh949711.computeprice;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,20 @@ public class ComputeActivity extends AppCompatActivity {
 
     EditText name, price, quantity, tax, totalPrice;
     Button compute, add, list;
+
+/*    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == MY_REQUEST_CODE){
+            if(resultCode == RESULT_OK){
+                name = data.getExtras().getInt("name");
+                price = data.getExtras().getInt("price");
+                quantity = data.getExtras().getInt("quantity");
+                tax = data.getExtras().getInt("tax");
+                totalPrice = data.getExtras().getInt("totalPrice");
+            }
+        }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +64,20 @@ public class ComputeActivity extends AppCompatActivity {
                     double q = Double.parseDouble(quantity.getText().toString());
                     double t = Double.parseDouble(tax.getText().toString());
                     double result = (pr*q) + (pr*q*t)/100;
+
                     name.setText(n);
                     totalPrice.setText(String.format("$%,.2f", result));
                     price.setText(String.format("$%,.2f", pr));
                     quantity.setText(String.format("%.0f", q));
                     tax.setText(String.format("%5.2f", t));
+
+                    Intent intent = new Intent(ComputeActivity.this, ComputeActivity2.class);
+                            intent.putExtra("name",n);
+                            intent.putExtra("totalPrice",result);
+                            intent.putExtra("price",pr);
+                            intent.putExtra("quantity",q);
+                            intent.putExtra("tax",t);
+                            //startActivityForResult(intent,MY_REQUEST_CODE);
                 }
             }
         });
