@@ -1,3 +1,9 @@
+/*
+    App: Compute Price
+    Authors: Kyra Belanger, James Hund
+    Version: 02/21/18
+    Description:
+ */
 package com.example.jh949711.computeprice;
 
 import android.content.Intent;
