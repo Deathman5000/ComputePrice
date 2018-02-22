@@ -17,9 +17,9 @@ import java.util.ArrayList;
 
 public class ComputeActivity2 extends AppCompatActivity {
 
-    TextView n, tp, pr, q, t;
+    EditText n, tp, pr, q, t;
     String name, price, quantity, tax, totalPrice;
-    Button compute, add, list;
+    Button add, list;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +36,8 @@ public class ComputeActivity2 extends AppCompatActivity {
         q = findViewById(R.id.quantity);
         t = findViewById(R.id.tax);
         tp = findViewById(R.id.totalPrice);
+        add = findViewById(R.id.addButton);
+        list = findViewById(R.id.listButton);
 
         n.setText(name);
         tp.setText(String.format("$%,.2f", totalPrice));

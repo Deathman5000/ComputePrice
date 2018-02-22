@@ -136,6 +136,8 @@
             android:layout_height="wrap_content"
             android:text="Add Item"
             android:id="@+id/addButton"
+            android:clickable="false"
+            android:textColor="@android:color/darker_gray"
             />
 
     </LinearLayout>
@@ -148,6 +150,8 @@
             android:layout_height="wrap_content"
             android:text="Show List"
             android:id="@+id/listButton"
+            android:clickable="false"
+            android:textColor="@android:color/darker_gray"
             />
 
     </LinearLayout>

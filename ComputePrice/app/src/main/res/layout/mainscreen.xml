@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jh949711.computeprice.ComputeActivity">>
+    tools:context="com.example.jh949711.computeprice.ComputeActivity2">
 
     <!-- Row one -->
     <LinearLayout
@@ -128,6 +128,8 @@
             android:layout_height="wrap_content"
             android:text="Compute"
             android:id="@+id/computeButton"
+            android:clickable="false"
+            android:textColor="@android:color/darker_gray"
 
             />
         <Button
