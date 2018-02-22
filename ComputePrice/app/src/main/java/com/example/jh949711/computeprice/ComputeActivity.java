@@ -14,10 +14,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class ComputeActivity extends AppCompatActivity {
 
     EditText name, price, quantity, tax, totalPrice;
     Button compute, add, list;
+    final int MY_REQUEST_CODE = 1;
 
 /*    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -71,19 +74,37 @@ public class ComputeActivity extends AppCompatActivity {
                     double t = Double.parseDouble(tax.getText().toString());
                     double result = (pr*q) + (pr*q*t)/100;
 
-                    name.setText(n);
+                /*    name.setText(n);
                     totalPrice.setText(String.format("$%,.2f", result));
                     price.setText(String.format("$%,.2f", pr));
                     quantity.setText(String.format("%.0f", q));
-                    tax.setText(String.format("%5.2f", t));
+                    tax.setText(String.format("%5.2f", t));*/
+
+                  /*  String stringPrice = Double.toString(pr);
+                    String stringQuantity = Double.toString(q);
+                    String stringTax = Double.toString(t);
+                    String stringResult = Double.toString(result);
+                    ArrayList<String> nameArray = new ArrayList<String>();
+                    ArrayList<String> priceArray = new ArrayList<String>();
+                    ArrayList<String> quantityArray = new ArrayList<String>();
+                    nameArray.add(n);
+                    priceArray.add(stringPrice);
+                    quantityArray.add(stringQuantity);
+                    Bundle b = new Bundle();
+                    b.putStringArrayList("nameArray",nameArray);
+                    b.putStringArrayList("priceArray",priceArray);
+                    b.putStringArrayList("quantityArray",quantityArray);
+                    Intent i = new Intent(ComputeActivity.this, ComputeActivity2.class);
+                    i.putExtras(b);*/
+
 
                     Intent intent = new Intent(ComputeActivity.this, ComputeActivity2.class);
-                            intent.putExtra("name",n);
-                            intent.putExtra("totalPrice",result);
-                            intent.putExtra("price",pr);
-                            intent.putExtra("quantity",q);
-                            intent.putExtra("tax",t);
-                            //startActivityForResult(intent,MY_REQUEST_CODE);
+                    intent.putExtra("name",n);
+                    intent.putExtra("totalPrice",result);
+                    intent.putExtra("price",pr);
+                    intent.putExtra("quantity",q);
+                    intent.putExtra("tax",t);
+                    startActivityForResult(intent,MY_REQUEST_CODE);
                 }
             }
         });
