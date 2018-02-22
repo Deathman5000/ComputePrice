@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class ComputeActivity extends AppCompatActivity {
 
     EditText name, price, quantity, tax, totalPrice;
-    Button compute, add, list;
+    Button compute;
     final int MY_REQUEST_CODE = 1;
 
 /*    @Override
@@ -46,8 +46,7 @@ public class ComputeActivity extends AppCompatActivity {
         tax = findViewById(R.id.tax);
         totalPrice = findViewById(R.id.totalPrice);
         compute = findViewById(R.id.computeButton);
-        add = findViewById(R.id.addButton);
-        list = findViewById(R.id.addButton);
+
         compute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,7 +103,7 @@ public class ComputeActivity extends AppCompatActivity {
                     intent.putExtra("price",pr);
                     intent.putExtra("quantity",q);
                     intent.putExtra("tax",t);
-                    startActivityForResult(intent,MY_REQUEST_CODE);
+                    startActivity(intent);
                 }
             }
         });
