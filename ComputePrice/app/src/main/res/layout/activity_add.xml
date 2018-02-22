@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         >
         <TextView
             android:layout_width="110dp"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="50dp"
         >
         <TextView
             android:layout_width="110dp"
@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="80dp"
         >
         <TextView
             android:layout_width="110dp"
