@@ -73,17 +73,17 @@ public class ComputeActivity extends AppCompatActivity {
                     double t = Double.parseDouble(tax.getText().toString());
                     double result = (pr*q) + (pr*q*t)/100;
 
-                /*    name.setText(n);
+                    name.setText(n);
                     totalPrice.setText(String.format("$%,.2f", result));
                     price.setText(String.format("$%,.2f", pr));
                     quantity.setText(String.format("%.0f", q));
-                    tax.setText(String.format("%5.2f", t));*/
+                    tax.setText(String.format("%5.2f", t));
 
-                  /*  String stringPrice = Double.toString(pr);
+                    String stringPrice = Double.toString(pr);
                     String stringQuantity = Double.toString(q);
                     String stringTax = Double.toString(t);
                     String stringResult = Double.toString(result);
-                    ArrayList<String> nameArray = new ArrayList<String>();
+                    /*ArrayList<String> nameArray = new ArrayList<String>();
                     ArrayList<String> priceArray = new ArrayList<String>();
                     ArrayList<String> quantityArray = new ArrayList<String>();
                     nameArray.add(n);
@@ -99,10 +99,10 @@ public class ComputeActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(ComputeActivity.this, ComputeActivity2.class);
                     intent.putExtra("name",n);
-                    intent.putExtra("totalPrice",result);
-                    intent.putExtra("price",pr);
-                    intent.putExtra("quantity",q);
-                    intent.putExtra("tax",t);
+                    intent.putExtra("totalPrice",stringResult);
+                    intent.putExtra("price",stringPrice);
+                    intent.putExtra("quantity",stringQuantity);
+                    intent.putExtra("tax",stringTax);
                     startActivity(intent);
                 }
             }
