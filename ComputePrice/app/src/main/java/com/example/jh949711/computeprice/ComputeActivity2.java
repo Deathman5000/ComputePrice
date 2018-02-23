@@ -18,19 +18,30 @@ import java.util.ArrayList;
 public class ComputeActivity2 extends AppCompatActivity {
 
     EditText n, tp, pr, q, t;
-    String name, price, quantity, tax, totalPrice;
+    String name, price, quantity, tax, totalPrice, Name, Price, Quanitity;
     Button add, list;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainscreen);
-        Bundle extras = getIntent().getExtras();
-        name = extras.getString("name");
-        price = extras.getString("price");
-        quantity = extras.getString("quantity");
-        tax = extras.getString("tax");
-        totalPrice = extras.getString("totalPrice");
+
+        //if (getIntent().getExtras().getString("from").equals("ComputeActivity")) {
+            Bundle extras = getIntent().getExtras();
+            name = extras.getString("name");
+            price = extras.getString("price");
+            quantity = extras.getString("quantity");
+            tax = extras.getString("tax");
+            totalPrice = extras.getString("totalPrice");
+        //}
+
+        //else if (getIntent().getExtras().getString("from").equals("AddActivity")) {
+            Bundle extras2 = getIntent().getExtras();
+            Name = extras2.getString("Name");
+            Price = extras2.getString("Price");
+            Quanitity = extras2.getString("Quantity");
+        //}
+
         n = findViewById(R.id.name);
         pr = findViewById(R.id.price);
         q = findViewById(R.id.quantity);
@@ -38,6 +49,7 @@ public class ComputeActivity2 extends AppCompatActivity {
         tp = findViewById(R.id.totalPrice);
         add = findViewById(R.id.addButton);
         list = findViewById(R.id.listButton);
+
 
         double priceNum = Double.parseDouble(price);
         double result = Double.parseDouble(totalPrice);
@@ -67,8 +79,11 @@ public class ComputeActivity2 extends AppCompatActivity {
                 ArrayList<String> priceArray = new ArrayList<String>();
                 ArrayList<String> quantityArray = new ArrayList<String>();
                 nameArray.add(name);
+                //nameArray.add(Name);
                 priceArray.add(price);
+                //priceArray.add(Price);
                 quantityArray.add(quantity);
+                //quantityArray.add(Quanitity);
                 Bundle b = new Bundle();
                 b.putStringArrayList("nameArray",nameArray);
                 b.putStringArrayList("priceArray",priceArray);

@@ -22,14 +22,6 @@ public class AddActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_add);
-
-
-            /*Intent intent1 = new Intent(AddActivity.this, List.class );
-                intent1.putExtra("Name", n);
-                //intent1.putExtra("Price", pr);
-                //intent1.putExtra("Quantity", q);*/
-
-                //startActivity( intent1 );
         }
 
         @Override
@@ -42,9 +34,21 @@ public class AddActivity extends AppCompatActivity {
 
             String n = aname.getText().toString();
             double pr = Double.parseDouble(aprice.getText().toString());
-            double q = Double.parseDouble(aquantity.getText().toString());
-            //aname.setText(n);
-            //aprice.setText(String.format("$%,.2f", pr));
-            //aquantity.setText(String.format("%.0f", q));
+            int q = Integer.parseInt(aquantity.getText().toString());
+            /*aname.setText(n);
+            aprice.setText(String.format("$%,.2f", pr));
+            aquantity.setText(String.format("%.0f", q));*/
+
+            String sPrice = Double.toString(pr);
+            String sQuantity = Integer.toString(q);
+
+            Intent intent1 = new Intent(AddActivity.this, ComputeActivity2.class );
+                //intent1.putExtra("from", "AddActivity");
+                intent1.putExtra("Name", n);
+                intent1.putExtra("Price", sPrice);
+                intent1.putExtra("Quantity", sQuantity);
+
+            startActivity( intent1 );
+            finish();
         }
 }

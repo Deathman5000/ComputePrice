@@ -98,6 +98,7 @@ public class ComputeActivity extends AppCompatActivity {
 
 
                     Intent intent = new Intent(ComputeActivity.this, ComputeActivity2.class);
+                    //intent.putExtra("from", "ComputeActivity");
                     intent.putExtra("name",n);
                     intent.putExtra("totalPrice",stringResult);
                     intent.putExtra("price",stringPrice);
