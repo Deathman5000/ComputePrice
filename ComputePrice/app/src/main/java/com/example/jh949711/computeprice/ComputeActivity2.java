@@ -75,6 +75,7 @@ public class ComputeActivity2 extends AppCompatActivity {
                 b.putStringArrayList("quantityArray",quantityArray);
                 Intent listScreen = new Intent(ComputeActivity2.this, List.class);
                 listScreen.putExtras(b);
+                startActivity(listScreen);
             }
         });
     }

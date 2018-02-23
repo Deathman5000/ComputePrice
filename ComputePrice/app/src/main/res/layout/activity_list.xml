@@ -7,12 +7,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.jh949711.computeprice.List">
 
-    <TextView
+    <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/TableLayout"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:id="@+id/itemList"
-        />
+        ></TableLayout>
 
 </LinearLayout>
