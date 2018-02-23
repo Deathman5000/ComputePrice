@@ -56,7 +56,7 @@ public class ComputeActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent addScreen = new Intent(ComputeActivity2.this,AddActivity.class);
-                startActivity(new Intent(ComputeActivity2.this, AddActivity.class));
+                startActivity(addScreen);
 
             }
         });
