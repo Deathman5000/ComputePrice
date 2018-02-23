@@ -39,11 +39,16 @@ public class ComputeActivity2 extends AppCompatActivity {
         add = findViewById(R.id.addButton);
         list = findViewById(R.id.listButton);
 
+        double priceNum = Double.parseDouble(price);
+        double result = Double.parseDouble(totalPrice);
+        double quantityNum = Double.parseDouble(quantity);
+        double taxNum = Double.parseDouble(tax);
+
         n.setText(name);
-        tp.setText(String.format("$%,.2f", totalPrice));
-        pr.setText(String.format("$%,.2f", price));
-        q.setText(String.format("%.0f", quantity));
-        t.setText(String.format("%5.2f", tax));
+        tp.setText(String.format("$%,.2f", result));
+        pr.setText(String.format("$%,.2f", priceNum));
+        q.setText(String.format("%.0f", quantityNum));
+        t.setText(String.format("%5.2f", taxNum));
 
 
 
