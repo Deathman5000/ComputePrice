@@ -17,11 +17,36 @@ import android.widget.TextView;
 public class AddActivity extends AppCompatActivity {
 
         EditText aname, aprice, aquantity;
+        TextView countTV;
+        int count = 0;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_add);
+            Bundle c = getIntent().getExtras();
+            count = c.getInt("count");
+            countTV = findViewById(R.id.countID);
+            countTV.setText("Number of Items: " + count);
+        /*    aname = findViewById(R.id.addName);
+            aprice = findViewById(R.id.addPrice);
+            aquantity = findViewById(R.id.addQuantity);
+
+            String n = aname.getText().toString();
+            double pr = Double.parseDouble(aprice.getText().toString());
+            double q = Double.parseDouble(aquantity.getText().toString());
+
+            String sPrice = Double.toString(pr);
+            String sQuantity = Double.toString(q);
+
+            Intent intent1 = new Intent(AddActivity.this, ComputeActivity2.class );
+            //intent1.putExtra("from", "AddActivity");
+            intent1.putExtra("Name", n);
+            intent1.putExtra("Price", sPrice);
+            intent1.putExtra("Quantity", sQuantity);
+
+            startActivity(intent1);*/
+
         }
 
         @Override

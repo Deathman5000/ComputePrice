@@ -20,6 +20,7 @@ public class ComputeActivity2 extends AppCompatActivity {
     EditText n, tp, pr, q, t;
     String name, price, quantity, tax, totalPrice, Name, Price, Quanitity;
     Button add, list;
+    int count = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,6 +69,8 @@ public class ComputeActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent addScreen = new Intent(ComputeActivity2.this,AddActivity.class);
+                count++;
+                addScreen.putExtra("count",count);
                 startActivity(addScreen);
 
             }
@@ -94,4 +97,27 @@ public class ComputeActivity2 extends AppCompatActivity {
             }
         });
     }
+
+   /* @Override
+    protected void onResume() {
+        super.onResume();
+        Bundle resume = getIntent().getExtras();
+        name = resume.getString("Name");
+        price = resume.getString("Price");
+        quantity = resume.getString("Quantity");
+        totalPrice = resume.getString("totalPrice");
+
+        double priceNum = Double.parseDouble(price);
+        double result = Double.parseDouble(totalPrice);
+        double quantityNum = Double.parseDouble(quantity);
+        double taxNum = Double.parseDouble(tax);
+        double Total = (priceNum*quantityNum) + (priceNum*quantityNum*taxNum)/100;
+        double grandTotal = Total + result;
+
+        n.setText(name);
+        pr.setText(String.format("$%,.2f", priceNum));
+        tp.setText(String.format("$%,.2f", grandTotal));
+        q.setText(String.format("%.0f", quantityNum));
+        t.setText(String.format("%5.2f", taxNum));
+    }*/
 }
