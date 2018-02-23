@@ -2,6 +2,7 @@ package com.example.jh949711.computeprice;
 /*
 This class holds the list of the items add after the list button is pushed
  */
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -53,6 +54,13 @@ public class List extends AppCompatActivity {
             row.addView(tv3);
             table.addView(row);
         }
+       /* Bundle c = new Bundle();
+        c.putStringArrayList("ListNameArray",nameArray);
+        c.putStringArrayList("ListPriceArray",priceArray);
+        c.putStringArrayList("ListQuantityArray",quantityArray);
+        Intent mainscreen = new Intent(List.this,ComputeActivity2.class);
+        mainscreen.putExtras(c);
+        startActivity(mainscreen);*/
 
     }
 

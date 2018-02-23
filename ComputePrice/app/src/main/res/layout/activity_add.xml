@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/addName"
             android:inputType="text"
+            android:hint="Enter Name"
             />
 
     </LinearLayout>
@@ -66,6 +67,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/addPrice"
             android:inputType="numberDecimal"
+            android:hint="0.00"
             />
 
     </LinearLayout>
@@ -89,6 +91,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/addQuantity"
             android:inputType="number"
+            android:hint="0"
             />
 
     </LinearLayout>
