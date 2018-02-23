@@ -4,6 +4,12 @@
     Version: 02/21/18
     Description: This program takes input from the user and computes the total price
                  of the items entered.
+    Code:   Kyra Belanger: AddActivity.java, activity_list.xml, and we both contributed
+                            to the compute activities.
+            James Hund: List.java, activity_list.xml, and we both contributed to both
+                        compute activities;
+    Percentage Done: We both did our halves of the workload so Kyra 50% + James 50% = Total 100%
+
  */
 package com.example.jh949711.computeprice;
 
