@@ -2,7 +2,8 @@
     App: Compute Price
     Authors: Kyra Belanger, James Hund
     Version: 02/21/18
-    Description:
+    Description: This program takes input from the user and computes the total price
+                 of the items entered.
  */
 package com.example.jh949711.computeprice;
 
